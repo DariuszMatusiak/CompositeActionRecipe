@@ -16,7 +16,7 @@ runs:
   using: 'composite'
   steps:
     - name: 'Awesome bash script action'
-      id: deep-throught
+      id: deep-thought
       shell: bash
       run: |
         echo "Pozdrowienia dla '${{ inputs.who-to-greet }}'"
