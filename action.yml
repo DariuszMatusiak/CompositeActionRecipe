@@ -1,0 +1,24 @@
+name: 'Composite action recipe'
+description: 'Pozdrowienia użytkownika i zwraca 42'
+
+inputs:
+  who-to-greet:
+    description: 'Kto ma być pozdrowiony'
+    required: true
+    default: 'Świat'
+
+outputs:
+  answer:
+    description: 'Pozdrowienie'
+    value: '${{ steps.deep-throught.outputs.greeting }}'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Awesome bash script action'
+      id: deep-throught
+      shell: bash
+      run: |
+        echo "Pozdrowienia dla '${{ inputs.who-to-greet }}'"
+        echo "answer=42" >> $GITHUB_OUTPUT
+        echo "Na razie ... "
