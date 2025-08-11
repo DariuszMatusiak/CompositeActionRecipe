@@ -12,5 +12,5 @@ jobs:
               with:
                 who-to-greet: "DM"
             
-            - name: Outpuut the answerGreeting action
+            - name: Outpuut the answer Greeting action
               run: echo "Odpowiedź to ${{ steps.my-action.outputs.answer }}"

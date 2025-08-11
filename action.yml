@@ -10,7 +10,7 @@ inputs:
 outputs:
   answer:
     description: 'Pozdrowienie'
-    value: '${{ steps.deep-throught.outputs.greeting }}'
+    value: '${{ steps.deep-thought.outputs.answer }}'
 
 runs:
   using: 'composite'
